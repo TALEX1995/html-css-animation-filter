@@ -126,18 +126,21 @@
 }
 
 .ex-11-icon:hover {
-    animation: rotate-hover linear 2s alternate;
+    animation: rotate-hover linear 2s;
 }
 
 @keyframes rotate-hover {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    95% {
         transform: rotate(270deg);
     }
-}
+    100% {
+        transform: rotate(0deg);
+    }
 
+}
 
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -152,6 +155,45 @@
     text-align: center;
     text-decoration: none;
 }
+
+
+
+
+.well:hover .ex-12-top-white {
+    animation: move-top linear 1s;
+}
+
+
+@keyframes move-top {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+.well:hover .ex-12-bottom-white {
+    animation: move-bottom linear 1s;
+}
+
+@keyframes move-bottom {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
